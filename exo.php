@@ -12,9 +12,11 @@
     <h1>Les exercices</h1>
     <ol>
         <li>Exercice 1</li>
+        <li><a href="/exo2.php">Exercice 2</a></li>
     </ol>
 
     <a href="">Ma repository github</a>
+    
 
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
