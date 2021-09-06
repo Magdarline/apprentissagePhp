@@ -1,0 +1,10 @@
+main:
+    scheme: ftp
+    host: magdarline.jeffnys.fr
+    port: 21
+    user: magde
+    pass: s9tpR2k1zvNb
+    check: true
+    exclude: ["dploy.yaml", ".gitignore"]
+    path:
+        remote: public_html/
