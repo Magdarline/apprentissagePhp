@@ -7,4 +7,4 @@ main:
     check: true
     exclude: ["dploy.yaml", ".gitignore"]
     path:
-        remote: public_html/
+        remote: /public_html/
