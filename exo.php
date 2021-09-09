@@ -12,10 +12,13 @@
     <h1>Les exercices</h1>
     <h3>Les exercices en PHP</h3>
     <ol>
-        <li>Exercice 1:mise en place du site</li>
-        <li><a href="/exo2.php">Exercice 2 : </a>décoder des chaines de caractère</li>
-        <li><a href="/exo3.php">Exercice 3 :</a>travailler avec des tableaux</li>
-        <li><a href="/exo4.php">Exercice 4 :</a>travailler avec des boucles</li>
+        <li>Exercice 1</li>
+        <li><a href="/exo2.php">Exercice 2</a></li>
+        <li><a href="/exo3.php">Exercice 3</a></li>
+        <li><a href="/exo4.php">Exercice 4</a></li>
+        <li><a href="/exo5.php">Exercice 5</a></li>
+        <li><a href="/exo6.php">Exercice 6</a></li>
+
     </ol>
 
     <a href="">Ma repository github</a>

@@ -1,3 +1,4 @@
+
 main:
     scheme: ftp
     host: magdarline.jeffnys.fr
@@ -8,3 +9,4 @@ main:
     exclude: ["dploy.yaml", ".gitignore"]
     path:
         remote: /public_html/
+
