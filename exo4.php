@@ -17,7 +17,9 @@
     $alphabet = "abcdefghijklmnopqrstuvwxyz";
     $alphabetTab =str_split($alphabet);
     $doubleAlphaTab = array_merge($alphabetTab,$alphabetTab);
-    $sizeAlphabet = count($alphabetTab);
+
+    $sizeAlphabet = count($sizeAlphabetTab);
+
     
     for ($i=0; $i<$sizeAlphabet; $i++) {
     for ($j=0; $j<$sizeAlphabet; $j++) {
@@ -51,7 +53,6 @@
         $keyCounter++;
     }
     $cryptedMessage = implode($encodedMessage);
-    
     
     ?>
     <p>le message est: <?php echo $message; ?></p>
