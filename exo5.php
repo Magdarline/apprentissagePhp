@@ -15,7 +15,7 @@
         <?php
         if (!empty($_POST)) {
             if ($_POST["message"]) {
-                $massage = strip_tags($_POST["message"]);
+                $message = strip_tags($_POST["message"]);
             }
             if ($_POST["key"]) {
                 $key = strip_tags($_POST["key"]);
