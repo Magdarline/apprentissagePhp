@@ -1,7 +1,20 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Exercice 8</title>
+</head>
+<body>
+    <?php include("./partial/_navBar.php");?>
+    <div class="container">
+        <h1>Exercice 8</h1>
+        <?php
 session_start();
-include('./script/functions.php');
-$data = openDB();
+include("./script/functions.php");
+$data = openDB(); 
 if (!empty($_POST)) {
     $securizedDataFromForm = treatFormData(
         $_POST,
@@ -10,41 +23,46 @@ if (!empty($_POST)) {
     );
     extract($securizedDataFromForm, EXTR_OVERWRITE);
 }
+
 if (isset($title, $note)) {
-    array_push($data['note'], [
-        'title' => $title,
-        'note' => $note,
+    array_push($data["note"], [
+        "title" =>$title,
+        "note" => $note,
     ]);
     writeDB($data);
 }
-$notes = $data["note"];
+
+$note = $data["note"];
 ?>
-<!doctype html>
-<html lang="fr">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <title>Note</title>
 </head>
+
 <body>
-    <?php include("./partial/_navBar.php"); ?>
-    <div class="container">
-        <h1>Page de prise de note</h1>
-        <form method="post">
-            <div class="form-group">
-                <label class="col-form-label" for="title">titre de la note : </label>
-                <input type="text" class="form-control border border-3" name="title">
-            </div>
-            <div class="form-group">
-                <label for="note">La note : </label>
-                <textarea name="note" class="form-control border border-3" rows="7"></textarea>
-            </div>
-            <input type="submit" class="btn btn-primary mt-3 mb-3" value="ajouter">
-        </form>
-        <?php
+<?php include("./partial/_navBar.php");?>
+<div class="container">
+<h1>Page de prise de notes</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label class="col-form-label" for="title">Titre de la note : </label>
+            <input type="text" class="form-control border border-3" name="title">
+        </div>
+        <div class="form-group">
+            <label for="note">La note : </label>
+            <textarea name="note" class="form-control border border-3" rows="10"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary mt-3 mb-3" value="Ajouter">
+    </form>
+
+    <?php
         if ($notes) :
         ?>
             <div class="accordion mb-3" id="accordionNotes">
@@ -69,6 +87,14 @@ $notes = $data["note"];
         ?>
             <p>Vous n'avez pas encore de note</p>
         <?php endif ?>
+    </div>
+
+
+
+</div>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
     </div>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
