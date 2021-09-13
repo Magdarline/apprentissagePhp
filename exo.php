@@ -25,6 +25,8 @@ include("./script/functions.php");
         <li><a href="/exo7.php">Exercice 7</a></li>
         <li><a href="/notes.php">Exercice 8</a></li>
         <li><a href="/inscription.php">Exercice 9</a></li>
+        <li><a href="/connexion.php">Exercice 9 bis</a>page connexion</li>
+
 
     </ol>
 
