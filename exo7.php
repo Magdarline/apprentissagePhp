@@ -1,4 +1,8 @@
 <?php
+session_start();
+include("./script/functions.php");
+?>
+<?php
 require("./script/cryptage.php");
 if (!empty($_POST)) {
     //var_dump($_POST);
