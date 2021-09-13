@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("./script/functions.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,34 @@
 <body>
 <?php include("./partial/_navBar.php");?>
 <h1>ma page test</h1>
+
+<pre>
+============================================================
+
+<?php
+    if ($_SESSION["user"]) {
+        echo "vous êtes connecté";
+    } else {
+        echo "vous n'existez pas";
+    }
+    ?>
+
+============================================================
+</pre>
+
+<pre>
+============================================================
+
+<?php
+    if (in_array("ROLE_ADMIN", $_SESSION["user"]["role"])) {
+        echo "vous êtes administrateur";
+    } else {
+        echo "vous n'avez pas de role particulier";
+    }
+    ?>
+
+============================================================
+</pre>
 
 <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
